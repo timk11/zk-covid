@@ -25,8 +25,6 @@ fn prediction(
 
 #[test]
 fn test_main() {
+    // should fail
     main([1; 38], 1);
-
-    // Uncomment to make test fail
-    // main(1, 1);
 }
