@@ -1,0 +1,3 @@
+[submodule "noir-ml"]
+	path = noir-ml
+	url = https://github.com/metavind/noir-ml
