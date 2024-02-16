@@ -10,7 +10,7 @@ fn main(
     assert(prediction(model, input) == result);
 }
 
-fn prediction(input) {
+fn prediction(input: [Field; 38]) {
 
 }
 
