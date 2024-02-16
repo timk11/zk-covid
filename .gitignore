@@ -1,2 +1,2 @@
-data/Covid_Data.csv
-data/model_data.csv
+model_training/Covid_Data.csv
+model_training/model_data.csv
