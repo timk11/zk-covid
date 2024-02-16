@@ -10,22 +10,22 @@ global b2: [Field; 1] = [-6858795766143916];
 
 fn main(
     input: [Field; 38],
-    pub result: Field
+    result: pub Field
 ) {
     assert(prediction(input) == result);
 }
 
 fn prediction(
     input: [Field; 38]
-) {
+) -> Field {
     let output = relu(fc(input, w1, b1));
-    let output = fc(input, w2, b2);
+    let output = fc(output, w2, b2);
     output[0]
 }
 
 #[test]
 fn test_main() {
-    main(1, 2);
+    main([1; 38], 1);
 
     // Uncomment to make test fail
     // main(1, 1);
