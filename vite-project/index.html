@@ -17,7 +17,7 @@
 <body>
   <script type="module" src="/main.js"></script>
   <h1>zkCOVID</h1>
-  <form>
+  <form id="submitForm">
     Age in years:
     <input type="number" id="age" name="age" min="0" max="125" required>
     <br>
@@ -81,7 +81,7 @@
       <input type="radio" name="cardiovasc" value="3">Unknown
     </div>
     <div id="obese">
-      <br> Obese: <br>
+      <br> Obesity: <br>
       <input type="radio" name="obese" value="1" required>Yes
       <input type="radio" name="obese" value="2">No
       <input type="radio" name="obese" value="3">Unknown

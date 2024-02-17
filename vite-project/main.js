@@ -20,12 +20,26 @@ function display(container, msg) {
   c.appendChild(p);
 }
 
-document.getElementById('submitGuess').addEventListener('click', async () => {
+document.getElementById('submitForm').addEventListener('submit', async () => {
   try {
     const backend = new BarretenbergBackend(circuit);
     const noir = new Noir(circuit, backend);
-    const x = parseInt(document.getElementById('guessInput').value);
-    const input = { x, y: 2 };
+    const sex = parseInt(document.getElementById('sex').value);
+    const pneumonia = parseInt(document.getElementById('pneumonia').value);
+    const age = parseInt(document.getElementById('age').value);
+    const pregnant = parseInt(document.getElementById('pregnant').value);
+    const diabetes = parseInt(document.getElementById('diabetes').value);
+    const copd = parseInt(document.getElementById('copd').value);
+    const asthma = parseInt(document.getElementById('asthma').value);
+    const immsupr = parseInt(document.getElementById('immsupr').value);
+    const hypertension = parseInt(document.getElementById('hypertension').value);
+    const other = parseInt(document.getElementById('other').value);
+    const cardiovasc = parseInt(document.getElementById('cardiovasc').value);
+    const obese = parseInt(document.getElementById('obese').value);
+    const renal = parseInt(document.getElementById('renal').value);
+    const tobacco = parseInt(document.getElementById('tobacco').value);
+    // need to create input array
+    const input = { x, y: 2 }; // change
     await setup(); // let's squeeze our wasm inits here
     display('logs', 'Generating proof... ⌛');
     const proof = await noir.generateFinalProof(input);
@@ -35,6 +49,6 @@ document.getElementById('submitGuess').addEventListener('click', async () => {
     const verification = await noir.verifyFinalProof(proof);
     if (verification) display('logs', 'Verifying proof... ✅');
   } catch(err) {
-    display("logs", "Oh 💔 Wrong guess")
+    display("logs", "Proof failed")
   }
 });
