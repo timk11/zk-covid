@@ -3,3 +3,4 @@ model_training/model_data.csv
 zk_model/target/
 vite-project/node_modules/
 .env
+node_modules/
