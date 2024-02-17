@@ -15,7 +15,7 @@ use crate::utils::is_positive;
 /// let activated = relu(values);
 /// assert_eq!(activated, [0, 2, 0]);
 /// ```
-fn relu<N>(values: [ Field; N ]) -> [ Field; N ] {
+pub fn relu<N>(values: [ Field; N ]) -> [ Field; N ] {
   let mut result = [0; N];
 
   for i in 0..N {

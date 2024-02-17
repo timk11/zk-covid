@@ -61,7 +61,7 @@ const package_name = circuitDetailResponse.data.nargo_package_name;
 */
 
 // Generate a new proof and poll for completion.
-const proofInput = "input = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]";
+const proofInput = "input = [0, 5000, 10000, 0, 0, 10000, 0, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0, 0, 10000, 0]";
 const proveResponse = await axios.post(`/circuit/${circuitId}/prove`, {
   proof_input: proofInput,
 });
@@ -90,6 +90,7 @@ console.log(proofDetailResponse.data.proof);
 console.log("Public Output:");
 console.log(proofDetailResponse.data.public);
 
+/*
 // Create zk_model/proofs if it does not exist
 const proof_dir = "./zk_model/proofs";
 if (!fs.existsSync(proof_dir)){
@@ -107,3 +108,4 @@ fs.writeFileSync(
   "zk_model/Verifier.toml",
   String(proofDetailResponse.data.public["Verifier.toml"]),
 );
+*/

@@ -9,15 +9,8 @@ global w2: [Field; 10] = [97962672, -27719523, -39368369, 37404730, -67286418, 1
 global b2: [Field; 1] = [-6858795766143916];
 
 fn main(
-    input: [Field; 38],
-    result: pub Field
-) {
-    assert(prediction(input) == result);
-}
-
-fn prediction(
     input: [Field; 38]
-) -> Field {
+) -> pub Field {
     let output = relu(fc(input, w1, b1));
     let output = fc(output, w2, b2);
     output[0]
@@ -25,6 +18,6 @@ fn prediction(
 
 #[test]
 fn test_main() {
-    // should fail
-    main([1; 38], 1);
+    let result = main([0; 38]) as i64;
+    assert(result <= 10000000000000000);
 }

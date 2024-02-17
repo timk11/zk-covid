@@ -18,7 +18,7 @@ global comp_constant_bytes = [0x00, 0x00, 0x00, 0xf8, 0xc9, 0xfa, 0xf0, 0xa1, 0x
 /// let value: Field = 123;
 /// assert!(is_positive(value));
 /// ```
-fn is_positive(value: Field) -> bool {
+pub fn is_positive(value: Field) -> bool {
   let value_bytes = value.to_le_bytes(32);
 
   let mut result: bool = true;
@@ -103,7 +103,7 @@ fn is_greater_than(x: Field, value: Field) -> bool {
 /// let value: Field = -10;
 /// assert!(is_greater_than_signed(x, value));
 /// ```
-fn is_greater_than_signed(x: Field, value: Field) -> bool {
+pub fn is_greater_than_signed(x: Field, value: Field) -> bool {
   let x_is_positive = is_positive(x);
   let value_is_positive = is_positive(value);
 

@@ -15,11 +15,11 @@
   </style>
 </head>
 <body>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
   <h1>zkCOVID</h1>
   <br>
   Demonstration only - Not for clinical use!!
-  <br>
+  <br><br>
   <form id="submitForm">
     Age in years:
     <input type="number" id="age" name="age" min="0" max="125" required>
@@ -104,9 +104,14 @@
     <br>
     <input type="submit" value="Submit">
   </form>
-  <div class="outer">
-    <div id="logs" class="inner"><h2>Logs</h2></div>
-    <div id="results" class="inner"><h2>Proof</h2></div>
-  </div>
+  <br>
+  <section id="score"></section>
+  <br>
+  <section id="results"></section>
+  <br><br>
+  <section id="proof"></section>
+  <section id="proof2"></section>
+  <br><br>
+  <section id="verify"></section>
 </body>
 </html>
