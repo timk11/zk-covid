@@ -59,7 +59,7 @@ const package_name = circuitDetailResponse.data.nargo_package_name;
 
 
 // Generate a new proof and poll for completion.
-const proofInput = "edgelist = [222, 331, 152, 294, 43, 270, 313, 278, 210, 383, 74, 22, 250, 317, 66, 169, 214, 385, 49, 337, 134, 5, 91, 1, 41, 299, 394, 160, 182, 299]";
+const proofInput = "input = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]";
 const proveResponse = await axios.post(`/circuit/${circuitId}/prove`, {
   proof_input: proofInput,
 });
