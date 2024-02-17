@@ -40,8 +40,14 @@ document.getElementById('submitForm').addEventListener('submit', async () => {
     const tobacco = parseInt(document.getElementById('tobacco').value);
     // need to create input array
     const input = { x, y: 2 }; // change
-    await setup(); // let's squeeze our wasm inits here
+    await setup();
+    display('logs', 'Generating result... ⌛');
+    const result = await noir.execute(input);
+    display('logs', 'Generating result... ✅');
+    display('results', result);
+    // display "high risk" or "unspecified risk"
     display('logs', 'Generating proof... ⌛');
+    // get proof method from compile.mjs
     const proof = await noir.generateFinalProof(input);
     display('logs', 'Generating proof... ✅');
     display('results', proof.proof);

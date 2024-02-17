@@ -7,6 +7,7 @@ const tar = (await import("tar")).default;
 
 // Make sure to provide your actual API key here.
 const SINDRI_API_KEY = process.env.SINDRI_API_KEY;
+const circuitId = process.env.CIRCUIT_ID;
 
 // Use v1 of the Sindri API.
 axios.defaults.baseURL = "https://sindri.app/api/v1";

@@ -1,6 +1,7 @@
 model_training/Covid_Data.csv
 model_training/model_data.csv
 zk_model/target/
+zk_model/proofs/
 vite-project/node_modules/
 .env
 node_modules/
