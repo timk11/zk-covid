@@ -152,7 +152,7 @@ document.getElementById('submitForm').addEventListener('submit', async () => {
     }
     document.getElementById('proof').innerText = 'Generating proof... ⌛';
     
-    // get proof method from compile.mjs
+    // Proof generation using Sindri API
     const proofInput = `input = ${inputArray}`;
     const proveResponse = await axios.post(`/circuit/${circuitId}/prove`, {
       proof_input: proofInput,
