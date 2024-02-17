@@ -15,6 +15,7 @@ axios.defaults.headers.common["Authorization"] = `Bearer ${SINDRI_API_KEY}`;
 // Expect 2xx responses for all requests.
 axios.defaults.validateStatus = (status) => status >= 200 && status < 300;
 
+/*
 // Create a new circuit.
 const formData = new FormData();
 formData.append(
@@ -56,7 +57,7 @@ while (true) {
 console.log("Circuit Detail:");
 console.log(circuitDetailResponse.data);
 const package_name = circuitDetailResponse.data.nargo_package_name;
-
+*/
 
 // Generate a new proof and poll for completion.
 const proofInput = "input = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]";
