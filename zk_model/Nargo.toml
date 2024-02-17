@@ -6,4 +6,4 @@ compiler_version = ">=0.23.0"
 
 [dependencies]
 # noir_ml = { tag = "0.9.0", git = "https://github.com/metavind/noir-ml", directory = "noir_ml" }
-noir_ml = { path = "../noir-ml/noir_ml" }
+noir_ml = { path = "./noir-ml/noir_ml" }
