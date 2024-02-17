@@ -181,7 +181,7 @@ document.getElementById('submitForm').addEventListener('submit', async () => {
 
     document.getElementById('verify').innerText = 'Verifying proof... ⌛';
     const verification = await noir.verifyFinalProof(proof);
-    if (verification) document.getElementById('verify').innerText = 'Verifying proof... ✅';
+    if (verification) document.getElementById('verify').innerText = 'Verified proof successfully ✅';
   } catch(err) {
     document.getElementById('verify').innerText = "Proof failed";
   }

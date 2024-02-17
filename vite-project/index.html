@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <head>
-  <style>
-    .outer {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .inner {
-        width: 45%;
-        border: 1px solid black;
-        padding: 10px;
-        word-wrap: break-word;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>zkCOVID</title>
+  <link type="text/css" rel="stylesheet" href="./main.css" />
 </head>
 <body>
-  <script type="module" src="./main.js"></script>
-  <h1>zkCOVID</h1>
+  <img src="./zkCOVID.jpg" alt="zkCOVID">
   <br>
-  Demonstration only - Not for clinical use!!
+  Demonstration only - Not for clinical use
   <br><br>
   <form id="submitForm">
     Age in years:
     <input type="number" id="age" name="age" min="0" max="125" required>
-    <br>
     <div id="sex">
       <br> Sex: <br>
       <input type="radio" name="sex" value="10000" required>Male
@@ -113,5 +101,6 @@
   <section id="proof2"></section>
   <br><br>
   <section id="verify"></section>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
