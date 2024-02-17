@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>zkCOVID</title>
+  <link type="text/css" rel="stylesheet" href="./vite-project/main.css" />
+</head>
+<body>
+  <img src="./zkCOVID.jpg" alt="zkCOVID">
+  <br>
+  Demonstration only - Not for clinical use
+  <br><br>
+  <form id="submitForm">
+    Age in years:
+    <input type="number" id="age" name="age" min="0" max="125" required>
+    <div id="sex">
+      <br> Sex: <br>
+      <input type="radio" name="sex" value="10000" required>Male
+      <input type="radio" name="sex" value="0">Female
+    </div>
+    <div id="pregnant">
+      <br> Pregnant: <br>
+      <input type="radio" name="pregnant" value="1" required>Yes
+      <input type="radio" name="pregnant" value="2">No
+      <input type="radio" name="pregnant" value="3">Unknown
+    </div>
+    <div id="tobacco">
+      <br> Tobacco: <br>
+      <input type="radio" name="tobacco" value="1" required>Yes
+      <input type="radio" name="tobacco" value="2">No
+      <input type="radio" name="tobacco" value="3">Unknown
+    </div>
+    <div id="pneumonia">
+      <br> Pneumonia: <br>
+      <input type="radio" name="pneumonia" value="1" required>Yes
+      <input type="radio" name="pneumonia" value="2">No
+      <input type="radio" name="pneumonia" value="3">Unknown
+    </div>
+    <div id="diabetes">
+      <br> Diabetes: <br>
+      <input type="radio" name="diabetes" value="1" required>Yes
+      <input type="radio" name="diabetes" value="2">No
+      <input type="radio" name="diabetes" value="3">Unknown
+    </div>
+    <div id="copd">
+      <br> COPD: <br>
+      <input type="radio" name="copd" value="1" required>Yes
+      <input type="radio" name="copd" value="2">No
+      <input type="radio" name="copd" value="3">Unknown
+    </div>
+    <div id="asthma">
+      <br> Asthma: <br>
+      <input type="radio" name="asthma" value="1" required>Yes
+      <input type="radio" name="asthma" value="2">No
+      <input type="radio" name="asthma" value="3">Unknown
+    </div>
+    <div id="immsupr">
+      <br> Immunosuppressed: <br>
+      <input type="radio" name="immsupr" value="1" required>Yes
+      <input type="radio" name="immsupr" value="2">No
+      <input type="radio" name="immsupr" value="3">Unknown
+    </div>
+    <div id="hypertension">
+      <br> Hypertension: <br>
+      <input type="radio" name="hypertension" value="1" required>Yes
+      <input type="radio" name="hypertension" value="2">No
+      <input type="radio" name="hypertension" value="3">Unknown
+    </div>
+    <div id="cardiovasc">
+      <br> Cardiovascular Disease: <br>
+      <input type="radio" name="cardiovasc" value="1" required>Yes
+      <input type="radio" name="cardiovasc" value="2">No
+      <input type="radio" name="cardiovasc" value="3">Unknown
+    </div>
+    <div id="obese">
+      <br> Obesity: <br>
+      <input type="radio" name="obese" value="1" required>Yes
+      <input type="radio" name="obese" value="2">No
+      <input type="radio" name="obese" value="3">Unknown
+    </div>
+    <div id="renal">
+      <br> Chronic Renal Disease: <br>
+      <input type="radio" name="renal" value="1" required>Yes
+      <input type="radio" name="renal" value="2">No
+      <input type="radio" name="renal" value="3">Unknown
+    </div>
+    <div id="other">
+      <br> Other Disease: <br>
+      <input type="radio" name="other" value="1" required>Yes
+      <input type="radio" name="other" value="2">No
+      <input type="radio" name="other" value="3">Unknown
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <section id="score"></section>
+  <br>
+  <section id="results"></section>
+  <br><br>
+  <section id="proof"></section>
+  <section id="proof2"></section>
+  <br><br>
+  <section id="verify"></section>
+  <script type="module" src="./vite-project/main.js"></script>
+</body>
+</html>
