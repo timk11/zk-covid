@@ -6,7 +6,7 @@ const process = (await import("process")).default;
 const tar = (await import("tar")).default;
 
 // Make sure to provide your actual API key here.
-const SINDRI_API_KEY = process.env.SINDRI_API_KEY || "<your-key-here>";
+const SINDRI_API_KEY = process.env.SINDRI_API_KEY;
 
 // Use v1 of the Sindri API.
 axios.defaults.baseURL = "https://sindri.app/api/v1";
@@ -19,7 +19,7 @@ axios.defaults.validateStatus = (status) => status >= 200 && status < 300;
 const formData = new FormData();
 formData.append(
   "files",
-  tar.c({ gzip: true, sync: true }, ["circuits/"]).read(),
+  tar.c({ gzip: true, sync: true }, ["zk_model/"]).read(),
   {
     filename: "compress.tar.gz",
   },
@@ -88,20 +88,20 @@ console.log(proofDetailResponse.data.proof);
 console.log("Public Output:");
 console.log(proofDetailResponse.data.public);
 
-// Create circuits/proofs if it does not exist
-const proof_dir = "./circuits/proofs";
+// Create zk_model/proofs if it does not exist
+const proof_dir = "./zk_model/proofs";
 if (!fs.existsSync(proof_dir)){
   fs.mkdirSync(proof_dir);
 }
 
 // Save the proof in appropriate Nargo-recognizable file
 fs.writeFileSync(
-  "circuits/proofs/"+package_name+".proof",
+  "zk_model/proofs/"+package_name+".proof",
   String(proofDetailResponse.data.proof["proof"]),
 );
 
 // Save the public data in appropriate Nargo-recognizable file
 fs.writeFileSync(
-  "circuits/Verifier.toml",
+  "zk_model/Verifier.toml",
   String(proofDetailResponse.data.public["Verifier.toml"]),
 );
